@@ -1,7 +1,7 @@
 {
   "name": "ssr-glue-plugin-server-vue",
   "author": "yaquawa",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "The SSR-Glue server side plugin for Vue.js",
   "main": "dist/index.js",

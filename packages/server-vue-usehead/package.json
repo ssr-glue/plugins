@@ -1,7 +1,7 @@
 {
   "name": "ssr-glue-plugin-server-vue-usehead",
   "author": "yaquawa",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "The SSR-Glue server side plugin for vueuse/head",
   "main": "dist/index.js",
@@ -34,8 +34,8 @@
     "ssr-glue-plugin-server-vue": "^1.0.1"
   },
   "devDependencies": {
-    "vue": "^3.0.11",
     "@vueuse/head": "^0.5.1",
-    "ssr-glue-plugin-server-vue": "^1.0.1"
+    "ssr-glue-plugin-server-vue": "^1.0.2",
+    "vue": "^3.0.11"
   }
 }
