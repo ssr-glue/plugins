@@ -1,0 +1,39 @@
+{
+  "name": "ssr-glue-plugin-client-vue-usehead",
+  "author": "yaquawa",
+  "version": "1.0.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "rm -rf dist && tsup src/index.ts --sourcemap --dts --format cjs,esm --external EventDispatcher",
+    "prepublishOnly": "npm run build",
+    "release": "npx git-ensure -a && npx bumpp --commit --tag --push"
+  },
+  "dependencies": {
+    "@ssr-glue/client-libs": "^1.0.4"
+  },
+  "peerDependencies": {
+    "@vueuse/head": "^0.5.1",
+    "ssr-glue-plugin-client-vue": "^1.0.1"
+  },
+  "devDependencies": {
+    "@vueuse/head": "^0.5.1",
+    "ssr-glue-plugin-client-vue": "^1.0.1"
+  }
+}
