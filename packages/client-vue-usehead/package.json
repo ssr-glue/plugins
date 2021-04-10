@@ -26,7 +26,7 @@
     "release": "npx git-ensure -a && npx bumpp --commit --tag --push"
   },
   "dependencies": {
-    "@ssr-glue/client-libs": "^1.0.4"
+    "@ssr-glue/client-libs": "^1.0.5"
   },
   "peerDependencies": {
     "@vueuse/head": "^0.5.1",

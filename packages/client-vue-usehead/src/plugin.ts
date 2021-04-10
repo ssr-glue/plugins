@@ -7,11 +7,15 @@ export function useHeadPlugin(): ClientSidePlugin {
   return {
     name: PLUGIN_NAME,
     onCreated() {
-      this.eventBus.one('plugin/vueApp/appCreated', (event) => {
-        const head = createHead()
+      this.eventBus.one(
+        'plugin/vueApp/appCreated',
+        (event) => {
+          const head = createHead()
 
-        event.app.use(head)
-      })
+          event.app.use(head)
+        },
+        { triggerLastEvent: true }
+      )
     },
   }
 }
