@@ -1,7 +1,7 @@
 {
   "name": "ssr-glue-plugin-client-vue",
   "author": "yaquawa",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
