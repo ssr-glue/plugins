@@ -1,7 +1,7 @@
 {
   "name": "ssr-glue-plugin-client-vue-usehead",
   "author": "yaquawa",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -34,6 +34,6 @@
   },
   "devDependencies": {
     "@vueuse/head": "^0.5.1",
-    "ssr-glue-plugin-client-vue": "^1.0.2"
+    "ssr-glue-plugin-client-vue": "^1.0.3"
   }
 }
