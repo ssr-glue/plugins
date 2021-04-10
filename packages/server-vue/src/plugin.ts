@@ -20,7 +20,7 @@ export function vueAppPlugin(options: Options): ServerSidePlugin {
   return {
     name: PLUGIN_NAME,
 
-    async onRequest(request: IncomingMessage) {
+    async request(request: IncomingMessage) {
       app = createSSRApp(options.app)
 
       options.onAppCreated && (await options.onAppCreated(app))

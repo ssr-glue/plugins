@@ -8,13 +8,15 @@ export function useHeadPlugin(): ServerSidePlugin {
 
   return {
     name: PLUGIN_NAME,
-    onCreated() {
+
+    created() {
       this.eventBus.one('plugin/vueApp/appCreated', (event) => {
         head = createHead()
 
         event.app.use(head)
       })
     },
+
     async transformHtml(html: string) {
       if (!head) {
         return html

@@ -6,7 +6,7 @@ export const PLUGIN_NAME = 'vue:useHead'
 export function useHeadPlugin(): ClientSidePlugin {
   return {
     name: PLUGIN_NAME,
-    onCreated() {
+    created() {
       this.eventBus.one(
         'plugin/vueApp/appCreated',
         (event) => {

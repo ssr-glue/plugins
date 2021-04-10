@@ -1354,21 +1354,21 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@ssr-glue/client-libs@^1.0.5":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@ssr-glue/client-libs/-/client-libs-1.0.6.tgz#2b4fd6600403e01c718755831b9ffb477f132014"
-  integrity sha512-+vWrKO49/BexTxwviDn6G/+JPN5ov0c0WSVzAgZRfESPO6PVhXlMVt0sDIGm7knvB/j6vViKePsrejl5NsWHZg==
+"@ssr-glue/client-libs@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@ssr-glue/client-libs/-/client-libs-1.0.7.tgz#f56a6e4d30e93269ed1d8157288f3e2db14c3473"
+  integrity sha512-gy8EzXNK0WLfjG9uyTtKpP5j0RVKgFFro1dzbRVTJe2xdOc2qyuAJvHj/Eo/lx/xr7AQbH61A3gzlYTgPtcl3A==
   dependencies:
     EventDispatcher "^3.0.0"
-    ssr-glue "^1.0.6"
+    ssr-glue "^1.0.7"
 
-"@ssr-glue/server-libs@^1.0.5":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@ssr-glue/server-libs/-/server-libs-1.0.6.tgz#17c215987e89fc7dc44364522b4777aa4ae3cc6a"
-  integrity sha512-dhg2MIqaoldX88fx4MVjVGcaWmmYbQIMYERZibIIYJju7IgNAUNDzgJBhwqc+A9Wx3agbOrVJuWyqnynpbGrRA==
+"@ssr-glue/server-libs@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@ssr-glue/server-libs/-/server-libs-1.0.7.tgz#7f5f07dc458e2ac145b6cda8ef3c4d33fc7c308a"
+  integrity sha512-hyo/TJJtF5AECXzRnGmR3VzAl8ON9W5ZIVeia1qqlBsD1IqoA4sjw40/1l2KIKU+9ma7LTHy+MNMNIdTxZDyYQ==
   dependencies:
     EventDispatcher "^3.0.0"
-    ssr-glue "^1.0.6"
+    ssr-glue "^1.0.7"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -6456,10 +6456,10 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
-ssr-glue@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/ssr-glue/-/ssr-glue-1.0.6.tgz#c7911031aa84ebe9ff4ea7ca9ec86ed7580cdf1b"
-  integrity sha512-fM+oLDh7vntktyoUI+A9cscbe7fuIIHR/K6k1PcGPjkHaFolWKTlq1JxcKU3ZJFKbDxmWba7om4EsUaiYeU4vQ==
+ssr-glue@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/ssr-glue/-/ssr-glue-1.0.7.tgz#e096ba949b4f9addc5963c03ee1eee2ddb0568f4"
+  integrity sha512-RMUr8HRjAAdl/fi3xpigus4pDSqPxWfSNGdPXQO2LuFukP+Mr5Y5Qxo6WWniOZ0DIEPwDKblj7q1k7R4HpwXew==
   dependencies:
     EventDispatcher "^3.0.0"
 
