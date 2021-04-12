@@ -10,7 +10,7 @@ export function useHeadPlugin(): ServerSidePlugin {
     name: PLUGIN_NAME,
 
     created() {
-      this.eventBus.one('plugin/vueApp/appCreated', (event) => {
+      this.eventBus.on('plugin/vueApp/appCreated', (event) => {
         head = createHead()
 
         event.app.use(head)

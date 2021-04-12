@@ -34,7 +34,7 @@ export function vueAppPlugin(options: Options): ServerSidePlugin {
 
       app.use(router)
 
-      const url = request.url!.replace('/index.html', '/')
+      const url = ((request as any).originalUrl || request.url)!.replace('/index.html', '/')
       // set the router to the desired URL before rendering
       router.push(url)
       await router.isReady()

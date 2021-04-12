@@ -15,10 +15,19 @@ it('should transform html', async () => {
     template: `<main>world</main>`,
   })
 
+  const about = defineComponent({
+    name: 'about',
+    template: `<main>about me</main>`,
+  })
+
   const routes: RouteRecordRaw[] = [
     {
       path: '/',
       component: home,
+    },
+    {
+      path: '/about',
+      component: about,
     },
   ]
 
@@ -26,9 +35,16 @@ it('should transform html', async () => {
     plugins: [vueAppPlugin({ app, routes })],
   })
 
-  const html = `<div id='app'><!--app-html--></div>`
-  const request = { url: 'https://example.com/index.html' } as IncomingMessage
-  const result = await ssrApp.render(html, request)
+  await ssrApp.boot()
 
-  expect(result).toEqual(`<div id='app'><div>hi<main>world</main></div></div>`)
+  const html = `<div id='app'><!--app-html--></div>`
+  const homepageRequest = { url: 'https://example.com/index.html' } as IncomingMessage
+  const homePageHtml = await ssrApp.render(html, homepageRequest)
+
+  expect(homePageHtml).toEqual(`<div id='app'><div>hi<main>world</main></div></div>`)
+
+  const aboutPageRequest = { url: 'https://example.com/about' } as IncomingMessage
+  const aboutPageHtml = await ssrApp.render(html, aboutPageRequest)
+
+  expect(aboutPageHtml).toEqual(`<div id='app'><div>hi<main>about me</main></div></div>`)
 })
