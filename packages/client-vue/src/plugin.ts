@@ -20,7 +20,17 @@ export function vueAppPlugin(options: Options): ClientSidePlugin {
     name: PLUGIN_NAME,
 
     async created() {
-      app = createSSRApp(options.app)
+      try {
+        // Enable SPA mode in ViteDevServer
+        if (import.meta.env.VITE_SPA_MODE) {
+          const { createApp } = await import('vue')
+          app = createApp(options.app)
+        } else {
+          app = createSSRApp(options.app)
+        }
+      } catch {
+        app = createSSRApp(options.app)
+      }
 
       options.appCreated && (await options.appCreated(app))
       this.eventBus.trigger(new VueAppCreatedEvent(app))
